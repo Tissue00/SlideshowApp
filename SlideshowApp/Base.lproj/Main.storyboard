@@ -18,40 +18,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRQ-yX-vuO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRQ-yX-vuO">
                                 <rect key="frame" x="192" y="652" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="startstop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zc8-bB-KCi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQt-Wv-DWi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQt-Wv-DWi">
                                 <rect key="frame" x="273" y="652" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="nextimg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iaf-tE-Ob7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWG-qg-qdg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWG-qg-qdg">
                                 <rect key="frame" x="111" y="652" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="backimg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j9L-Y9-eMC"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TEf-6v-kyX">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TEf-6v-kyX">
                                 <rect key="frame" x="46" y="127" width="322" height="420"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="ILk-3X-SOu"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="dRA-hx-jwz" appends="YES" id="qy1-07-7gg"/>
                                 </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yWG-qg-qdg" firstAttribute="leading" secondItem="EfG-Ye-PhF" secondAttribute="leading" constant="111" id="6CR-So-7ne"/>
+                            <constraint firstItem="EfG-Ye-PhF" firstAttribute="trailing" secondItem="TEf-6v-kyX" secondAttribute="trailing" constant="46" id="Gzw-zC-LNL"/>
+                            <constraint firstItem="EfG-Ye-PhF" firstAttribute="bottom" secondItem="fQt-Wv-DWi" secondAttribute="bottom" constant="54" id="LB8-fh-bfw"/>
+                            <constraint firstItem="EfG-Ye-PhF" firstAttribute="trailing" secondItem="fQt-Wv-DWi" secondAttribute="trailing" constant="110" id="LtA-kw-iy1"/>
+                            <constraint firstItem="iRQ-yX-vuO" firstAttribute="leading" secondItem="yWG-qg-qdg" secondAttribute="trailing" constant="50" id="O29-6b-GIb"/>
+                            <constraint firstItem="fQt-Wv-DWi" firstAttribute="leading" secondItem="iRQ-yX-vuO" secondAttribute="trailing" constant="50" id="PCz-T7-NQR"/>
+                            <constraint firstItem="EfG-Ye-PhF" firstAttribute="bottom" secondItem="iRQ-yX-vuO" secondAttribute="bottom" constant="54" id="VMO-h0-IpJ"/>
+                            <constraint firstItem="fQt-Wv-DWi" firstAttribute="leading" secondItem="iRQ-yX-vuO" secondAttribute="trailing" constant="50" id="gzv-z4-Dvk"/>
+                            <constraint firstItem="TEf-6v-kyX" firstAttribute="leading" secondItem="EfG-Ye-PhF" secondAttribute="leading" constant="46" id="htB-aS-S56"/>
+                            <constraint firstItem="iRQ-yX-vuO" firstAttribute="leading" secondItem="yWG-qg-qdg" secondAttribute="trailing" constant="50" id="p5H-39-7tQ"/>
+                            <constraint firstItem="TEf-6v-kyX" firstAttribute="top" secondItem="EfG-Ye-PhF" secondAttribute="top" constant="107" id="rob-QS-WJZ"/>
+                            <constraint firstItem="EfG-Ye-PhF" firstAttribute="bottom" secondItem="yWG-qg-qdg" secondAttribute="bottom" constant="54" id="taY-JC-2kH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EfG-Ye-PhF"/>
                     </view>
                     <connections>
@@ -78,20 +91,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsY-R9-D6J">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsY-R9-D6J">
                                 <rect key="frame" x="54" y="654" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="mUh-EE-fco" kind="unwind" unwindAction="unwind:" id="zlW-z9-QRi"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ujy-Db-wBF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ujy-Db-wBF">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="608" id="wie-ok-mzk"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tp3-Hd-Or9" firstAttribute="trailing" secondItem="JsY-R9-D6J" secondAttribute="trailing" constant="329" id="8Bl-mi-a14"/>
+                            <constraint firstItem="Ujy-Db-wBF" firstAttribute="leading" secondItem="Tp3-Hd-Or9" secondAttribute="leading" id="GLe-WT-C9e"/>
+                            <constraint firstItem="Ujy-Db-wBF" firstAttribute="trailing" secondItem="Tp3-Hd-Or9" secondAttribute="trailing" id="adD-JS-xGa"/>
+                            <constraint firstItem="Ujy-Db-wBF" firstAttribute="top" secondItem="eQf-hO-dAD" secondAttribute="top" id="cQJ-sz-4EE"/>
+                            <constraint firstItem="JsY-R9-D6J" firstAttribute="leading" secondItem="Tp3-Hd-Or9" secondAttribute="leading" constant="54" id="e4l-g5-WEt"/>
+                            <constraint firstItem="Tp3-Hd-Or9" firstAttribute="bottom" secondItem="JsY-R9-D6J" secondAttribute="bottom" constant="52" id="uqp-j1-OyA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Tp3-Hd-Or9"/>
                     </view>
                     <connections>
